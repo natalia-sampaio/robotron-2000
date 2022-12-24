@@ -127,6 +127,18 @@ main {
     cursor: pointer;
 }
 
+.controle-select {
+    display: inline-block;
+    border-radius: 50%;
+    color: var(--main-cinza);
+    font-size: 1.57em;
+    background: var(--main-preto);
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
 .linha {
     border-color: var(--main-cinza);
 }

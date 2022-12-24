@@ -33,6 +33,16 @@ const pecas = {
         "velocidade": -2
     }
 }
+const img = document.getElementById("robotron");
+const color = document.getElementById("color");
+const imagens = [
+    "robotron-amarelo.png",
+    "robotron-azul.png",
+    "robotron-branco.png",
+    "robotron-preto.png",
+    "robotron-rosa.png",
+    "robotron-vermelho.png"
+]
 
 controle.forEach( (elemento) => {
     elemento.addEventListener("click", (evento) => {
@@ -56,3 +66,15 @@ function atualizaEstatisticas(peca) {
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
     })
 }
+// let i = 0;
+// img.addEventListener("click", () => {
+//     i++;
+//     if (i == imagens.length) {
+//         i = 0
+//     }
+//     img.src = "img/" + imagens[i];
+// });
+
+color.addEventListener("input", e => {
+    img.src = "img/robotron-" + e.target.value + ".png";
+})
